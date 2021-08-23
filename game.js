@@ -9,7 +9,8 @@ kaboom({
 })
 
 scene("game", () => {
-
+  // add three layers with obj as default
+  layers(['bg', 'obj', 'ui'], 'obj')
 })
 
 start("game")
