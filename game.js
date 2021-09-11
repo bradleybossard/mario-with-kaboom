@@ -107,6 +107,7 @@ scene("game", () => {
     solid(),
     pos(30, 30),
     body(),
+    big(),
     origin('bot')
   ]);
 
