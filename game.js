@@ -37,6 +37,8 @@ scene("game", () => {
 		'==============================   =====',
 		];
 
+  gravity(400)
+
 	const levelCfg = {
 		width: 20,
 		height: 20,
