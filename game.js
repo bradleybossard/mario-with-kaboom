@@ -75,6 +75,7 @@ scene("game", () => {
   ]);
 
   const MOVE_SPEED = 120;
+  const JUMP_FORCE = 100;
 
   keyDown('left', () => {
     player.move(-MOVE_SPEED, 0)
@@ -82,6 +83,12 @@ scene("game", () => {
 
   keyDown('right', () => {
     player.move(MOVE_SPEED, 0)
+  })
+
+  keyDown('space', () => {
+    if (player.grounded()) {
+      player.jump(JUMP_FORCE);
+    }
   })
 
 
