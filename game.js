@@ -55,6 +55,15 @@ scene("game", () => {
 		'#': [sprite('mushroom'), solid()],
 		};
 
+  const scoreLabel = add([
+    text('test score'),
+    pos(30, 6),
+    layer('ui'),
+    {
+      value: 'test score' 
+    }
+  ]);
+
   const gameLevel = addLevel(map, levelCfg);
 
   const player = add([
