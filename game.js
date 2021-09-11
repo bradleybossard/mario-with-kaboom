@@ -74,6 +74,17 @@ scene("game", () => {
     origin('bot')
   ]);
 
+  const MOVE_SPEED = 120;
+
+  keyDown('left', () => {
+    player.move(-MOVE_SPEED, 0)
+  })
+
+  keyDown('right', () => {
+    player.move(MOVE_SPEED, 0)
+  })
+
+
 });
 
 start("game");
