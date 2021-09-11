@@ -6,6 +6,12 @@ kaboom({
   clearColor: [0, 0, 0, 1]
 })
 
+const MOVE_SPEED = 120;
+const JUMP_FORCE = 220; 
+const BIG_JUMP_FORCE = 550;
+let CURRENT_JUMP_FORCE = JUMP_FORCE;
+
+
 loadRoot('https://i.imgur.com/')
 loadSprite('coin', 'wbKxhcd.png')
 loadSprite('evil-shroom', 'KPO3fR9.png')
@@ -103,9 +109,6 @@ scene("game", () => {
     body(),
     origin('bot')
   ]);
-
-  const MOVE_SPEED = 120;
-  const JUMP_FORCE = 100;
 
   keyDown('left', () => {
     player.move(-MOVE_SPEED, 0)
