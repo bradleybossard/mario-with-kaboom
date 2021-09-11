@@ -58,7 +58,7 @@ scene("game", () => {
 		'-': [sprite('pipe-top-left'), solid(), scale(0.5)],
 		'+': [sprite('pipe-top-right'), solid(), scale(0.5)],
 		'^': [sprite('evil-shroom'), solid()],
-		'#': [sprite('mushroom'), solid()],
+		'#': [sprite('mushroom'), solid(), 'mushroom', body()],
 		};
 
   const scoreLabel = add([
@@ -110,6 +110,10 @@ scene("game", () => {
     big(),
     origin('bot')
   ]);
+
+  action('mushroom', (m) => {
+    m.move(20, 0)
+  });
 
   player.on("headbump", (obj) => {
     if (obj.is('coin-surprise')) {
